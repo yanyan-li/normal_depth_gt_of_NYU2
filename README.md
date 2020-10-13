@@ -1,6 +1,6 @@
 # Normal/Depth Images Generating from NYU2 (labeled dataset) 
 
-<img src="teaser/0.jpg" alt="0" style="zoom:25%;" /><img src="teaser/0.png" alt="0" style="zoom:25%;"/>
+![teaser](teaser/teaser.png)
 
 It is fucking struggling to find a suitable pre-processed labeled NYU2 dataset for your DL model. This repo recovers those images that can be evaluated in all types of deep learning frameworks.
 
@@ -58,6 +58,9 @@ cd normal_depth_gt_of_NYU
 2. extract planes
 
 ```
+cd NYU2
+mkdir mask
+cd ..
 ./RGBDPlaneDetection/build/RGBDPlaneDetect NYU2 NYU2/associate.txt  NYU2/
 ```
 
