@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -fpermissive -O3 -DNDEBUG  -shared -Wl,-soname,libRGBDPlaneDetection.so -o libRGBDPlaneDetection.so CMakeFiles/RGBDPlaneDetection.dir/plane_detection.cpp.o  -L/home/yan/Documents/1.research/7.PlaneDetection/semantic-segmentation-pytorch/source/PlaneDetection/include/MRF2.2 
