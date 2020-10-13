@@ -29,3 +29,35 @@ PIL
 
 **Step 3: generate normal maps and planar masks**
 
+ RGB and Depth frames have been synchronized. Then we can obtain the intrinsic parameters for normal estimation.  
+
+```
+% The maximum depth used, in meters.
+maxDepth = 10;
+
+% RGB Intrinsic Parameters
+fx_rgb = 5.1885790117450188e+02;
+fy_rgb = 5.1946961112127485e+02;
+cx_rgb = 3.2558244941119034e+02;
+cy_rgb = 2.5373616633400465e+02;
+
+% Parameters for making depth absolute.
+depthParam1 = 351.3;
+depthParam2 = 1092.5;
+```
+
+
+
+1. download this repo  **normal_depth_gt_of_NYU2**
+
+```
+cd normal_depth_gt_of_NYU
+./build_linux.sh 
+```
+
+2. extract planes
+
+```
+./RGBDPlaneDetection/build/RGBDPlaneDetect NYU2 NYU2/associate.txt  NYU2/
+```
+

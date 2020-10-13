@@ -13,8 +13,8 @@ depths=f["depths"]
 images=np.array(images)
 depths=np.array(depths)
  
-rgb_path_converted='RGB/'
-depth_path_converted = 'depth/'
+rgb_path_converted='NYU2/RGB/'
+depth_path_converted = 'NYU2/depth/'
 if not os.path.isdir(rgb_path_converted):
     os.makedirs(rgb_path_converted)
 if not os.path.isdir(depth_path_converted):
