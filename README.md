@@ -60,6 +60,8 @@ cd normal_depth_gt_of_NYU
 ```
 cd NYU2
 mkdir mask
+mkdir instance
+mkdir fittedNormal
 cd ..
 ./RGBDPlaneDetection/build/RGBDPlaneDetect NYU2 NYU2/associate.txt  NYU2/
 ```
