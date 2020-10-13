@@ -6,7 +6,7 @@ It is fucking struggling to find a suitable pre-processed labeled NYU2 dataset f
 
 A few steps to achieve the goal.  I hope it can make your research easier.
 
-**Step 1: download the .mat file **
+**Step 1: download the .mat file**
 
 The NYUv2 dataset images can be downloaded from the [NYU website](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html). We use the 1449 images (795 images for training and 654 images for testing).
 
