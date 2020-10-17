@@ -12,7 +12,7 @@ A few steps to achieve the goal.  I hope it can make your research easier.
 
 The NYUv2 dataset images can be downloaded from the [NYU website](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), which has 1449 images.
 
-The per-pixel normal maps can be downloaded from the [here](https://drive.google.com/file/d/1FbOaH0G5_BI6yOjuzgBRcMuKjFSoUWB0/view?usp=sharing).
+The per-pixel normal maps can be downloaded from [here](https://drive.google.com/file/d/1FbOaH0G5_BI6yOjuzgBRcMuKjFSoUWB0/view?usp=sharing).
 
 **Step 2: generate RGB, depth and per-pixel normal images**
 
@@ -37,9 +37,11 @@ python extractNormal.py
 
 ----
 
-**Step 3: generate normal maps and planar masks**
+**Step 3: generate plane-based normal maps and planar masks**
 
- RGB and Depth frames have been synchronized. Then we can obtain the intrinsic parameters for normal estimation.  
+This part comes from C++ code, which requires the OpenCV lib. 
+
+RGB and Depth frames have been synchronized. Then we can obtain the intrinsic parameters for normal estimation.  
 
 ```
 % The maximum depth used, in meters.
@@ -55,8 +57,6 @@ cy_rgb = 2.5373616633400465e+02;
 depthParam1 = 351.3;
 depthParam2 = 1092.5;
 ```
-
-
 
 1. download this repo  **normal_depth_gt_of_NYU2**
 
