@@ -1,10 +1,6 @@
 # Normal/Depth Images Generating from NYU2 (labeled dataset) 
 
-![teaser](teaser/teaser.png)
-
------
-
-![teaser-icl](teaser/teaser-icl.png)
+![nyu2](teaser/nyu2.png)
 
 ---
 
@@ -12,17 +8,15 @@ It is fucking struggling to find a suitable pre-processed labeled NYU2 dataset f
 
 A few steps to achieve the goal.  I hope it can make your research easier.
 
-**Step 1: download the .mat file**
+**Step 1: download two .mat files**
 
-The NYUv2 dataset images can be downloaded from the [NYU website](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html). We use the 1449 images (795 images for training and 654 images for testing).
+The NYUv2 dataset images can be downloaded from the [NYU website](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), which has 1449 images.
 
-**Step 2: generate RGB and depth images**
+The per-pixel normal maps can be downloaded from the [here](https://drive.google.com/file/d/1FbOaH0G5_BI6yOjuzgBRcMuKjFSoUWB0/view?usp=sharing).
 
-```
-python extractImages.py
-```
+**Step 2: generate RGB, depth and per-pixel normal images**
 
-Please make sure that the .mat file is in the same folder with the extractImages.py. 
+Let *extractRGBD.py* and *extractNormal.py* be in the same file with two .mat files.  Please make sure that you installed following libs.
 
 ```
 # The following libs are needed.
@@ -32,6 +26,16 @@ scipy.io
 h5py
 PIL 
 ```
+
+Then, run following commends to generate images:
+
+```
+python extractRGBD.py
+
+python extractNormal.py
+```
+
+----
 
 **Step 3: generate normal maps and planar masks**
 
