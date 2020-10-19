@@ -12,11 +12,11 @@ A few steps to achieve the goal.  I hope it can make your research easier.
 
 The NYUv2 dataset images can be downloaded from the [NYU website](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html), which has 1449 images.
 
-The per-pixel normal maps can be downloaded from [here](https://drive.google.com/file/d/1FbOaH0G5_BI6yOjuzgBRcMuKjFSoUWB0/view?usp=sharing).
+The per-pixel normal maps and masks can be downloaded from [here](https://drive.google.com/file/d/1FbOaH0G5_BI6yOjuzgBRcMuKjFSoUWB0/view?usp=sharing) and [here](https://drive.google.com/file/d/1Uo85eWtrTd4BWsyamCuBXP9UiB8MLEPh/view?usp=sharing), respectively. 
 
 **Step 2: generate RGB, depth and per-pixel normal images**
 
-Let *extractRGBD.py* and *extractNormal.py* be in the same file with two .mat files.  Please make sure that you installed following libs.
+Let *extractRGBD.py*,  *extractNormal.py* and *extractMask.py* be in the same folder with three .mat files.  Please make sure that you installed following libs.
 
 ```
 # The following libs are needed.
@@ -33,6 +33,8 @@ Then, run following commends to generate images:
 python extractRGBD.py
 
 python extractNormal.py
+
+python extractMask.py
 ```
 
 ----
